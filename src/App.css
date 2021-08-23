@@ -1,14 +1,21 @@
 .App {
   text-align: center;
+  background-color: #222324;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #222324;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,4 +36,57 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  overflow: hidden;
+}
+
+.carousel-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-root .carousel.carousel-slider {
+  flex-grow: 1;
+}
+
+ul.control-dots {
+  display: block;
+}
+
+.slider-wrapper.axis-horizontal, .slider-wrapper.axis-horizontal .slide div {
+  height: 100%;
+}
+
+.slider-wrapper.axis-horizontal, .slider-wrapper.axis-horizontal .slide div img {
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+ul.slider.animated {
+  height: 100%;
+}
+
+.slider-wrapper.axis-horizontal .slide div {
+  display: flex;
+  align-items: center;
+  background-color: #222222;
+}
+
+.carousel.carousel-slider {
+  width: auto !important;
+}
+
+p {
+  justify-content: center;
+  color: whitesmoke;
+  font-size: x-large;
+  display: flex;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  background-color: #222222;
+  height: 100vh;
 }

@@ -1,32 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { withAuthenticator } from 'aws-amplify-react'
-import Amplify, { Auth } from 'aws-amplify';
-import aws_exports from './aws-exports';
-Amplify.configure(aws_exports);
+import React from 'react';
+import { render } from 'react-dom';
+import Carousel from './Carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Dimensions } from 'react-native';
+import DeviceOrientation, { Orientation } from 'react-screen-orientation'
+ 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+function App() {
+
+
+  return(
+    <DeviceOrientation lockOrientation={'landscape'}>
+    {/* Will only be in DOM in landscape */}
+    <Orientation orientation='landscape' alwaysRender={false}>
+    <div>
+        <Carousel />
+    </div>
+    </Orientation>
+    {/* Will stay in DOM, but is only visible in portrait */}
+    <Orientation orientation='portrait'>
+      <div>
+        <p>This presentaion is best viewed in landscape, please rotate your device. </p>
       </div>
-    );
-  }
+    </Orientation>
+  </DeviceOrientation>
+
+
+  );
 }
 
-export default withAuthenticator(App, true);
+export default App
+//render(<App />, document.getElementById('root'));
+

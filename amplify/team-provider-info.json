@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-investorsecportal-dev-220237-authRole",
+            "UnauthRoleArn": "arn:aws:iam::107015223157:role/amplify-investorsecportal-dev-220237-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::107015223157:role/amplify-investorsecportal-dev-220237-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-investorsecportal-dev-220237-deployment",
+            "UnauthRoleName": "amplify-investorsecportal-dev-220237-unauthRole",
+            "StackName": "amplify-investorsecportal-dev-220237",
+            "StackId": "arn:aws:cloudformation:eu-west-2:107015223157:stack/amplify-investorsecportal-dev-220237/73cc41a0-0455-11ec-b8ee-06d617d25924",
+            "AmplifyAppId": "d1nmqtc7a3x3dj"
+        },
+        "categories": {
+            "auth": {
+                "investorsecportal526f08ac": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1nmqtc7a3x3dj",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
